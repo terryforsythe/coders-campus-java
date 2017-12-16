@@ -15,20 +15,17 @@ public class LotteryNumberGeneratorTest {
 
 	@Before
 	public void setup() {
-
 		underTest = new LotteryNumberGenerator();
 	}
 
 	@Test
 	public void shouldGenerateSingleNumberBetween1And49() {
-
 		int result = underTest.generateLotteryNumber();
 		assertTrue(result >= 1 && result <= 49);
 	}
 
 	@Test
 	public void shouldReturnSetOfSixNumbers() {
-
 		Set<Integer> result = underTest.generateSetOfLotteryNumbers();
 		assertThat(result.size(), is(6));
 	}

@@ -15,15 +15,27 @@ public class LotteryNumberPickerTest {
 
 	@Before
 	public void setup() {
-
 		underTest = new LotteryNumberPicker();
 	}
 
 	@Test
 	public void shouldReturnSetOfSixNumbersChosenByUser() throws IOException {
-
 		Set<Integer> result = underTest.promptUserForLotteryNumbers();
 		assertThat(result.size(), is(6));
+	}
+
+	@Test
+	public void shouldNotValidateNumberZeroForInputRange() {
+		int lotteryNumber = 0;
+		boolean result = underTest.isValidInputRange(lotteryNumber);
+		assertThat(result, is(false));
+	}
+
+	@Test
+	public void shouldNotValidateNumberFiftyForInputRange() {
+		int lotteryNumber = 50;
+		boolean result = underTest.isValidInputRange(lotteryNumber);
+		assertThat(result, is(false));
 	}
 
 }

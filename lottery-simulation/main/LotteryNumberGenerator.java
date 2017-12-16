@@ -7,7 +7,6 @@ import java.util.Set;
 public class LotteryNumberGenerator {
 
 	public int generateLotteryNumber() {
-
 		Random lotteryNumber = new Random();
 		return lotteryNumber.nextInt(49) + 1;
 	}
