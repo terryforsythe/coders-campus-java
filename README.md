@@ -1,1 +1,1 @@
-# coders-campus-java
+Excercises via [Coders Campus](http://coderscampus.com/)
