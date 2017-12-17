@@ -14,7 +14,7 @@ public class LotteryNumberPicker {
 
 		userLotteryNumbers = new HashSet<Integer>();
 		Scanner userInput = new Scanner(System.in);
-		boolean isFullLotterySet = false;
+		boolean isEmptyLotterySet = true;
 
 		do {
 
@@ -28,7 +28,7 @@ public class LotteryNumberPicker {
 				}
 
 				if (userLotteryNumbers.size() == 6) {
-					isFullLotterySet = true;
+					isEmptyLotterySet = false;
 					userInput.close();
 				}
 
@@ -39,7 +39,7 @@ public class LotteryNumberPicker {
 				userInput.next();
 			}
 
-		} while (!isFullLotterySet);
+		} while (isEmptyLotterySet);
 
 		return userLotteryNumbers;
 	}
