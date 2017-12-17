@@ -8,9 +8,11 @@ import java.util.Set;
 
 public class LotteryNumberPicker {
 
+	Set<Integer> userLotteryNumbers;
+
 	public Set<Integer> promptUserForLotteryNumbers() throws IOException {
 
-		Set<Integer> userLotteryNumbers = new HashSet<Integer>();
+		userLotteryNumbers = new HashSet<Integer>();
 		Scanner userInput = new Scanner(System.in);
 		boolean isFullLotterySet = false;
 
@@ -21,7 +23,7 @@ public class LotteryNumberPicker {
 				System.out.print("Please input a lottery number from 1 to 49: ");
 				int lotteryNumber = userInput.nextInt();
 
-				if (isValidInputRange(lotteryNumber)) {
+				if (isValidLotteryInput(lotteryNumber)) {
 					userLotteryNumbers.add(lotteryNumber);
 				}
 
@@ -42,8 +44,16 @@ public class LotteryNumberPicker {
 		return userLotteryNumbers;
 	}
 
+	private boolean isValidLotteryInput(int lotteryNumber) {
+		return isValidInputRange(lotteryNumber) && !isDuplicateNumber(lotteryNumber);
+	}
+
 	public boolean isValidInputRange(int lotteryNumber) {
 		return lotteryNumber >= 1 && lotteryNumber <= 49;
+	}
+
+	public boolean isDuplicateNumber(int lotteryNumber) {
+		return userLotteryNumbers.contains(lotteryNumber);
 	}
 
 }
