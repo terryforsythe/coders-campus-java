@@ -1,13 +1,15 @@
 package test;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 import java.io.IOException;
 import java.util.Set;
-import main.LotteryNumberPicker;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import main.LotteryNumberPicker;
 
 public class LotteryNumberPickerTest {
 
@@ -23,7 +25,7 @@ public class LotteryNumberPickerTest {
 		Set<Integer> result = underTest.promptUserForLotteryNumbers();
 		assertThat(result.size(), is(6));
 	}
-
+	
 	@Test
 	public void shouldNotValidateNumberZeroForInputRange() {
 		int lotteryNumber = 0;
