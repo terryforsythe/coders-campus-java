@@ -5,13 +5,13 @@ import java.util.Set;
 
 public class PlayLottery {
 
-	public Set<Integer> matchLotteryNumbers(Set<Integer> lotteryNumbers, Set<Integer> userNumbers) {
+	public Set<Integer> matchLotteryNumbers(Set<Integer> lotteryNumbers, Set<Integer> userLotteryNumbers) {
 
 		Set<Integer> matchedNumbers = new HashSet<Integer>();
 
 		for (int lotteryNumber : lotteryNumbers) {
 
-			if (userNumbers.contains(lotteryNumber)) {
+			if (userLotteryNumbers.contains(lotteryNumber)) {
 				matchedNumbers.add(lotteryNumber);
 			}
 		}

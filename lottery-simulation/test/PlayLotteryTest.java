@@ -26,15 +26,15 @@ public class PlayLotteryTest {
 		lotteryNumbers.add(26);
 		lotteryNumbers.add(37);
 
-		Set<Integer> userNumbers = new HashSet<>(LOTTERY_SIZE);
-		userNumbers.add(8);
-		userNumbers.add(9);
-		userNumbers.add(12);
-		userNumbers.add(20);
-		userNumbers.add(23);
-		userNumbers.add(26);
+		Set<Integer> userLotteryNumbers = new HashSet<>(LOTTERY_SIZE);
+		userLotteryNumbers.add(8);
+		userLotteryNumbers.add(9);
+		userLotteryNumbers.add(12);
+		userLotteryNumbers.add(20);
+		userLotteryNumbers.add(23);
+		userLotteryNumbers.add(26);
 
-		Set<Integer> result = lottery.matchLotteryNumbers(lotteryNumbers, userNumbers);
+		Set<Integer> result = lottery.matchLotteryNumbers(lotteryNumbers, userLotteryNumbers);
 
 		assertThat(result.size(), is(2));
 		assertThat(result.contains(12), is(true));
