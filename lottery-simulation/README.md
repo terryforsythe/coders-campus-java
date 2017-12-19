@@ -5,3 +5,4 @@ The assignment is to simulate the lottery. You will need to implement code that 
 
 Here’s the catch, you will need to make sure there are no duplicate numbers (either when being randomly generated or inputted in the console). It’s just like a real lottery after-all!
 
+*Description credit: [Trevor Page](http://coderscampus.com/trevor-page/) of Coders Campus*
