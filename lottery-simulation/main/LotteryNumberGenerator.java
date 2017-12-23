@@ -10,7 +10,6 @@ public class LotteryNumberGenerator {
 		Random lotteryNumber = new Random();
 		return lotteryNumber.nextInt(49) + 1;
 	}
-	
 
 	public Set<Integer> generateSetOfLotteryNumbers() {
 
@@ -23,7 +22,7 @@ public class LotteryNumberGenerator {
 		return lotteryNumbers;
 	}
 
-	public int generateLotteryNumberTest() {
+	public int test_generateLotteryNumber() {
 		return generateLotteryNumber();
 	}
 }

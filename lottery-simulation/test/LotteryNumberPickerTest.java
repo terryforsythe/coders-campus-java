@@ -25,18 +25,18 @@ public class LotteryNumberPickerTest {
 		Set<Integer> result = underTest.promptUserForLotteryNumbers();
 		assertThat(result.size(), is(6));
 	}
-	
+
 	@Test
 	public void shouldNotValidateNumberZeroForInputRange() {
 		int lotteryNumber = 0;
-		boolean result = underTest.isValidInputRangeTest(lotteryNumber);
+		boolean result = underTest.test_isValidInputRange(lotteryNumber);
 		assertThat(result, is(false));
 	}
 
 	@Test
 	public void shouldNotValidateNumberFiftyForInputRange() {
 		int lotteryNumber = 50;
-		boolean result = underTest.isValidInputRangeTest(lotteryNumber);
+		boolean result = underTest.test_isValidInputRange(lotteryNumber);
 		assertThat(result, is(false));
 	}
 

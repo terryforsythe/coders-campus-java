@@ -56,7 +56,7 @@ public class LotteryNumberPicker {
 		return lotteryNumber >= 1 && lotteryNumber <= 49;
 	}
 
-	public boolean isValidInputRangeTest(int lotteryNumber) {
+	public boolean test_isValidInputRange(int lotteryNumber) {
 		return isValidInputRange(lotteryNumber);
 	}
 

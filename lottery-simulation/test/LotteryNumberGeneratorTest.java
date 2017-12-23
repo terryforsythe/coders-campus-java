@@ -1,13 +1,15 @@
 package test;
 
-import java.util.Set;
-import main.LotteryNumberGenerator;
-import org.junit.Before;
-import org.junit.Test;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
+
+import java.util.Set;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import main.LotteryNumberGenerator;
 
 public class LotteryNumberGeneratorTest {
 
@@ -20,7 +22,7 @@ public class LotteryNumberGeneratorTest {
 
 	@Test
 	public void shouldGenerateSingleNumberBetween1And49() {
-		int result = underTest.generateLotteryNumberTest();
+		int result = underTest.test_generateLotteryNumber();
 		assertTrue(result >= 1 && result <= 49);
 	}
 
