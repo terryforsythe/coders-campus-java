@@ -20,7 +20,7 @@ public class LotteryNumberGeneratorTest {
 
 	@Test
 	public void shouldGenerateSingleNumberBetween1And49() {
-		int result = underTest.generateLotteryNumber();
+		int result = underTest.generateLotteryNumberTest();
 		assertTrue(result >= 1 && result <= 49);
 	}
 

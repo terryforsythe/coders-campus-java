@@ -26,7 +26,7 @@ public class LotteryNumberMatcherTest {
 		lotteryNumbers.add(26);
 		lotteryNumbers.add(37);
 
-		Set<Integer> userLotteryNumbers = new HashSet<>(LOTTERY_SIZE);
+		Set<Integer> userLotteryNumbers = new HashSet<Integer>(LOTTERY_SIZE);
 		userLotteryNumbers.add(8);
 		userLotteryNumbers.add(9);
 		userLotteryNumbers.add(12);

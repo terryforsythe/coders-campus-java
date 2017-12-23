@@ -14,7 +14,6 @@ public class LotteryNumberPicker {
 
 		userLotteryNumbers = new HashSet<Integer>();
 		Scanner userInput = new Scanner(System.in);
-		boolean isEmptyLotterySet = true;
 
 		do {
 
@@ -23,13 +22,8 @@ public class LotteryNumberPicker {
 				System.out.print("Please input a lottery number from 1 to 49: ");
 				int lotteryNumber = userInput.nextInt();
 
-				if (isValidLotteryInput(lotteryNumber)) {
+				if (isValidInput(lotteryNumber)) {
 					userLotteryNumbers.add(lotteryNumber);
-				}
-
-				if (userLotteryNumbers.size() == 6) {
-					isEmptyLotterySet = false;
-					userInput.close();
 				}
 
 			}
@@ -39,21 +33,31 @@ public class LotteryNumberPicker {
 				userInput.next();
 			}
 
-		} while (isEmptyLotterySet);
+		} while (isIncompleteLotterySet());
+
+		userInput.close();
 
 		return userLotteryNumbers;
 	}
 
-	private boolean isValidLotteryInput(int lotteryNumber) {
-		return isValidInputRange(lotteryNumber) && !isDuplicateNumber(lotteryNumber);
+	private boolean isIncompleteLotterySet() {
+		return userLotteryNumbers.size() != 6;
 	}
 
-	public boolean isValidInputRange(int lotteryNumber) {
+	private boolean isNotDuplicateNumber(int lotteryNumber) {
+		return !userLotteryNumbers.contains(lotteryNumber);
+	}
+
+	private boolean isValidInput(int lotteryNumber) {
+		return isValidInputRange(lotteryNumber) && isNotDuplicateNumber(lotteryNumber);
+	}
+
+	private boolean isValidInputRange(int lotteryNumber) {
 		return lotteryNumber >= 1 && lotteryNumber <= 49;
 	}
 
-	public boolean isDuplicateNumber(int lotteryNumber) {
-		return userLotteryNumbers.contains(lotteryNumber);
+	public boolean isValidInputRangeTest(int lotteryNumber) {
+		return isValidInputRange(lotteryNumber);
 	}
 
 }

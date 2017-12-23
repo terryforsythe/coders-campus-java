@@ -29,14 +29,14 @@ public class LotteryNumberPickerTest {
 	@Test
 	public void shouldNotValidateNumberZeroForInputRange() {
 		int lotteryNumber = 0;
-		boolean result = underTest.isValidInputRange(lotteryNumber);
+		boolean result = underTest.isValidInputRangeTest(lotteryNumber);
 		assertThat(result, is(false));
 	}
 
 	@Test
 	public void shouldNotValidateNumberFiftyForInputRange() {
 		int lotteryNumber = 50;
-		boolean result = underTest.isValidInputRange(lotteryNumber);
+		boolean result = underTest.isValidInputRangeTest(lotteryNumber);
 		assertThat(result, is(false));
 	}
 
