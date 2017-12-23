@@ -41,7 +41,7 @@ public class LotteryNumberPicker {
 	}
 
 	private boolean isIncompleteLotterySet() {
-		return userLotteryNumbers.size() != 6;
+		return userLotteryNumbers.size() < 6;
 	}
 
 	private boolean isNotDuplicateNumber(int lotteryNumber) {

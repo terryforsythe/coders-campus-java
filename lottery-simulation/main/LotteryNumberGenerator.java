@@ -11,11 +11,15 @@ public class LotteryNumberGenerator {
 		return lotteryNumber.nextInt(49) + 1;
 	}
 
+	private boolean isIncompleteLotterySet(Set<Integer> lotteryNumbers) {
+		return lotteryNumbers.size() < 6;
+	}
+
 	public Set<Integer> generateSetOfLotteryNumbers() {
 
 		Set<Integer> lotteryNumbers = new HashSet<Integer>();
 
-		while (lotteryNumbers.size() < 6) {
+		while (isIncompleteLotterySet(lotteryNumbers)) {
 			lotteryNumbers.add(generateLotteryNumber());
 		}
 
