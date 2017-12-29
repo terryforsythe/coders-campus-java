@@ -41,9 +41,17 @@ public class LotteryNumberMatcherTest {
 	}
 
 	@Test
-	public void shouldReturnSetWithTwoMatchedNumbers() {
+	public void shouldReturnMatchedSetWithASizeOfTwo() {
 		assertThat(result.size(), is(2));
+	}
+
+	@Test
+	public void shouldReturn12AsMatchedNumber() {
 		assertThat(result.contains(12), is(true));
+	}
+
+	@Test
+	public void shouldReturn26AsMatchedNumber() {
 		assertThat(result.contains(26), is(true));
 	}
 
