@@ -6,14 +6,17 @@ import static org.junit.Assert.assertThat;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import main.LotteryNumberMatcher;
 
 public class LotteryNumberMatcherTest {
 
-	@Test
-	public void shouldMatchGeneratedLotteryNumbersWithUserChosenNumbers() {
+	Set<Integer> result;
+
+	@Before
+	public void setup() {
 
 		LotteryNumberMatcher underTest = new LotteryNumberMatcher();
 		final int LOTTERY_SIZE = 6;
@@ -34,8 +37,11 @@ public class LotteryNumberMatcherTest {
 		userLotteryNumbers.add(23);
 		userLotteryNumbers.add(26);
 
-		Set<Integer> result = underTest.matchLotteryNumbers(lotteryNumbers, userLotteryNumbers);
+		result = underTest.matchLotteryNumbers(lotteryNumbers, userLotteryNumbers);
+	}
 
+	@Test
+	public void shouldReturnSetWithTwoMatchedNumbers() {
 		assertThat(result.size(), is(2));
 		assertThat(result.contains(12), is(true));
 		assertThat(result.contains(26), is(true));
