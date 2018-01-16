@@ -4,7 +4,6 @@ Assignment 2 - Employees
 > You will need to develop a system that can track employee information for two Organizations (Google and Microsoft). 
 
 > The Employee information you must track is as follows:
-
 > * Name
 > * Sex
 > * Job Title
@@ -12,7 +11,6 @@ Assignment 2 - Employees
 > * Birthdate
 
 > As for the Organization that the Employee works for, you must also track this information:
-
 > * Organization Name
 > * Number of Employees
 
