@@ -1,4 +1,4 @@
-Assignment 1 - Lottery
+Assignment 1: Lottery
 -----
 
 > The assignment is to simulate the lottery. You will need to implement code that will generate 6 lottery numbers between 1 and 49 (inclusive), you will then need to implement the code that will read in 6 numbers that you will type into the console yourself. Then the numbers you input will be compared against the randomly generated lottery numbers and it will output which numbers match (if any).
