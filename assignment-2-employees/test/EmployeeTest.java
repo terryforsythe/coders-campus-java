@@ -27,7 +27,7 @@ public class EmployeeTest {
 	String employee2;
 
 	@Before
-	public void createEmployee1() {
+	public void initializeEmployee1() {
 		name = "Bill Gates";
 		sex = "male";
 		birthdate.set(1955, 9, 28); // month starts on zero-based index
@@ -49,12 +49,11 @@ public class EmployeeTest {
 	@Test
 	public void shouldRecognizeTwoDifferentEmployeeEntriesAsDifferentPeople() {
 
-		// set birthdate for employee2
-		birthdate.set(1973, 7, 21);
+		birthdate.set(1973, 7, 21); // set birthdate for employee2
 
 		employee2 = new Employee("Sergey Brin", "male", birthdate, new Google(), "Co-Founder").toString();
 
 		assertThat(employee2, is(not(equalTo(employee1))));
-
 	}
+	
 }

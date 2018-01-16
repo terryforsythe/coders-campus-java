@@ -1,4 +1,4 @@
-Assignment 2 - Employees
+Assignment 2: Employees
 -----
 
 > You will need to develop a system that can track employee information for two Organizations (Google and Microsoft). 

@@ -24,7 +24,7 @@ public abstract class Person {
 
 	private String formatBirthdate() {
 		SimpleDateFormat birthdateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
+		
 		return birthdateFormat.format(getBirthdate().getTime());
 	}
 

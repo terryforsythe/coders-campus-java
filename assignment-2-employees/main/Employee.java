@@ -7,7 +7,6 @@ public class Employee extends Person {
 	private String name;
 	private String sex;
 	private Calendar birthdate;
-
 	private Organization organization;
 	private String jobTitle;
 
