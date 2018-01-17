@@ -18,4 +18,4 @@ Assignment 2: Employees
 
 > The same rules apply to comparing Organizations to one another. Organizations with the same Organization name are to be thought of as equal, different names means different organizations.
 
-*Description by Trevor Page of Coders Campus*
+> *-- Description by Trevor Page of Coders Campus*
