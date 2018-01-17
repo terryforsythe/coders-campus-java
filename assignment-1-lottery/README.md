@@ -5,4 +5,4 @@ Assignment 1: Lottery
 
 > Here’s the catch, you will need to make sure there are no duplicate numbers (either when being randomly generated or inputted in the console). It’s just like a real lottery after-all!
 
-*Description by Trevor Page of Coders Campus*
+> *-- Description by Trevor Page of Coders Campus*
