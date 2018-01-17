@@ -48,9 +48,9 @@ public class EmployeeTest {
 
 	@Test
 	public void shouldRecognizeTwoDifferentEmployeeEntriesAsDifferentPeople() {
-
+		
 		birthdate.set(1973, 7, 21); // set birthdate for employee2
-
+		
 		employee2 = new Employee("Sergey Brin", "male", birthdate, new Google(), "Co-Founder").toString();
 
 		assertThat(employee2, is(not(equalTo(employee1))));
